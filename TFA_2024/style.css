@@ -145,7 +145,9 @@ body,html,sub,sup {
     line-height: 1.1;
     letter-spacing: -.02em
 }
-
+.second-title {
+    font-size: 5.2em;
+}
 .p-web h2, h3,.projects__header h3 {
     font-size: 2.39em;
     line-height: 1;
@@ -892,7 +894,19 @@ header .nav__next {
         max-width: 8em
     }
 }
+@media screen and (min-width: 991px) {
+   
 
+    .h-hero__text__p {
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+          
+    }
+
+ }
 .services__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1651,40 +1665,78 @@ footer div {
 
 /* contact section */
 
-#contact {
+.cta h3,.p-next__link,.project .project__title {
+    font-size: 3.5em;
+    line-height: 1;
+    
+}
+
+h3 {
+    font-size: 6em;
+}
+.cta {
+    padding-top: 10em;
+    padding-bottom: 4em
+}
+
+.cta .wrapper {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
+    justify-content: space-between;
+    align-items: flex-end
 }
 
-.contact-info-upper-container {
-    display: flex;
-    justify-content: center;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53);
-    border-color: rgb(26, 14, 14);
-    background: rgb(250, 250, 250);
-    margin: 2rem auto;
-    padding: 0.5rem;
-
+.cta__content {
+     
+    max-width: 56.25em;
+    width: 100%
 }
 
-.contact-info-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem;
-
+.cta__image,.cta__image::after {
+    position: absolute;
+    border-radius: 50%
 }
 
-.contact-info-container p {
-    font-size: larger;
+.cta__image,.cta__image::after {
+    position: absolute;
+    border-radius: 50%
 }
 
-.contact-icon {
-    cursor: default;
+@media screen and (max-width: 839px) {
+    .cta .wrapper {
+        flex-direction:column;
+        align-items: flex-start
+    }
+
+    .cta__content {
+        margin-bottom: 2em
+    }
+}
+
+
+
+.cta h3,.h-hero,.h-hero__sub,.services__item {
+    position: relative
+}
+
+.cta h3 {
+    text-indent: 1.25em
+}
+
+
+@media screen and (max-width: 669px) {
+    .cta h3 {
+        font-size:3.58em;
+        text-indent: 1.5em;
+        line-height: 1.1
+    }
+}
+
+.dark-mode .cta__image::after {
+    border-color: #111414
+}
+
+.c-image-wrapper,.dropdown__body,body,html,main {
+    overflow: hidden
 }
 
 
@@ -1704,3 +1756,9 @@ footer div {
 
 }
 
+/* section pourquoi moi */
+
+
+
+  
+  

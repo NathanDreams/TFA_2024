@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // Fixer la position verticale de l'image
-        hoverImage.style.top = '2%'; 
+        hoverImage.style.top = '-40%'; 
     });
 
     iolceProject.addEventListener('mouseleave', function () {
@@ -61,12 +61,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ruxProject.addEventListener('mousemove', function (e) {
         hoverImageRUX.style.display = 'block';
-        hoverImageRUX.style.left = (e.clientX - hoverImageRUX.offsetWidth * 0.6) + 'px';
-        hoverImageRUX.style.top = '45%';
+        hoverImageRUX.style.left = (e.clientX - hoverImageRUX.offsetWidth * 0.8) + 'px';
+        hoverImageRUX.style.top = '10%';
     });
 
     ruxProject.addEventListener('mouseleave', function () {
         hoverImageRUX.style.display = 'none';
     });
 });
+
+
+
+
+
+
+
 
