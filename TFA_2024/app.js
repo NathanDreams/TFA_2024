@@ -34,24 +34,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+document.addEventListener('DOMContentLoaded', function () {
+    const iolceProject = document.getElementById('iolce');
+    const hoverImage = iolceProject.querySelector('.hover-image');
+    
+    iolceProject.addEventListener('mousemove', function (e) {
+        hoverImage.style.display = 'block';
 
-function plusSlide(n) {
-  showSlides(slideIndex += n);
-}
+        // Calculer la position de l'image en fonction de la position horizontale de la souris
+        hoverImage.style.left = (e.clientX - hoverImage.offsetWidth * 0.8) + 'px';
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  let i;
-  const slides = document.getElementsByClassName("slides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-}
+        // Fixer la position verticale de l'image
+        hoverImage.style.top = '2%'; 
+    });
+
+    iolceProject.addEventListener('mouseleave', function () {
+        hoverImage.style.display = 'none';
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const ruxProject = document.querySelector('.projects__list .project:nth-child(2)'); // Sélectionnez le deuxième projet
+    const hoverImageRUX = ruxProject.querySelector('.hover-image');
+
+    ruxProject.addEventListener('mousemove', function (e) {
+        hoverImageRUX.style.display = 'block';
+        hoverImageRUX.style.left = (e.clientX - hoverImageRUX.offsetWidth * 0.6) + 'px';
+        hoverImageRUX.style.top = '45%';
+    });
+
+    ruxProject.addEventListener('mouseleave', function () {
+        hoverImageRUX.style.display = 'none';
+    });
+});
+
