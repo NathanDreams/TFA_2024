@@ -37,39 +37,49 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const iolceProject = document.getElementById('iolce');
     const hoverImage = iolceProject.querySelector('.hover-image');
-    
+    const link = iolceProject.querySelector('a');
+  
     iolceProject.addEventListener('mousemove', function (e) {
-        hoverImage.style.display = 'block';
-
-        // Calculer la position de l'image en fonction de la position horizontale de la souris
-        hoverImage.style.left = (e.clientX - hoverImage.offsetWidth * 0.8) + 'px';
-
-
-        // Fixer la position verticale de l'image
-        hoverImage.style.top = '-40%'; 
+      hoverImage.style.display = 'block';
+  
+      // Calculer la position de l'image en fonction de la position horizontale de la souris
+      hoverImage.style.left = (e.clientX - hoverImage.offsetWidth * 0.8) + 'px';
+  
+      // Fixer la position verticale de l'image
+      hoverImage.style.top = '-40%';
     });
-
+  
     iolceProject.addEventListener('mouseleave', function () {
-        hoverImage.style.display = 'none';
+      hoverImage.style.display = 'none';
     });
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
+  
+    iolceProject.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = link.href;
+    });
+  });
+  
+  
+  document.addEventListener('DOMContentLoaded', function () {
     const ruxProject = document.querySelector('.projects__list .project:nth-child(2)'); // Sélectionnez le deuxième projet
     const hoverImageRUX = ruxProject.querySelector('.hover-image');
-
+    const linkRUX = ruxProject.querySelector('a');
+  
     ruxProject.addEventListener('mousemove', function (e) {
-        hoverImageRUX.style.display = 'block';
-        hoverImageRUX.style.left = (e.clientX - hoverImageRUX.offsetWidth * 0.8) + 'px';
-        hoverImageRUX.style.top = '10%';
+      hoverImageRUX.style.display = 'block';
+      hoverImageRUX.style.left = (e.clientX - hoverImageRUX.offsetWidth * 0.8) + 'px';
+      hoverImageRUX.style.top = '10%';
     });
-
+  
     ruxProject.addEventListener('mouseleave', function () {
-        hoverImageRUX.style.display = 'none';
+      hoverImageRUX.style.display = 'none';
     });
-});
-
+  
+    ruxProject.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.location.href = linkRUX.href;
+    });
+  });
 
 
 

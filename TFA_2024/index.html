@@ -2,13 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PORTFOLIO - Nathan Collart</title>
+        <meta name="description" content="Bienvenue sur mon portfolio">
+        <meta name="author" content="PORTFOLIO Nathan Collart">
+        <meta name="copyright" content="Nathan Collart - DWT - HEAJ - 2024">
+        <meta property="og:site_name" content="PORTFOLIO Nathan Collart - DWT - HEAJ">
+        <meta property="og:title" content="PORTFOLIO - Nathan Collart">
+        <meta property="og:description" content="Bienvenue sur mon PORTFOLIO venez découvrir mon projet.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://nathan-collart.be">
+        <meta property="og:image" content="http://nathan-collart.be/projets/TFA">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="images/logo_flavicon.png" type="image">
+        <link rel="icon" href="images/logo_flavicon.png" type="image/png">
         <script src="app.js"></script>
-       
     </head>
+    
     <body id="body">
         <div id="viewport">
             <div>
@@ -22,7 +32,7 @@
                                 <a href="#contact" class="nav__link header__item text-link">Contact</a>
                             </div>
                             <label class="nav__theme header__item">
-                                <div class="nav__theme__icon">
+                                <span class="nav__theme__icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" class="cc-moon">
                                         <path fill="none" d="M0 0h12v12H0z"></path>
                                         <path fill="currentColor" d="M6.315 10.617q-.223 0-.448-.02a4.93 4.93 0 0 1-.876-9.66.394.394 0 0 1 .486.486 4.142 4.142 0 0 0 5.1 5.1.394.394 0 0 1 .486.486 4.943 4.943 0 0 1-4.748 3.608Zm-1.741-8.69a4.142 4.142 0 1 0 5.5 5.5 4.931 4.931 0 0 1-5.5-5.5Z"></path>
@@ -30,10 +40,11 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 11.997 11.999" class="cc-sun">
                                         <path fill="currentColor" d="M5.599 11.601v-1a.4.4 0 0 1 .4-.4.4.4 0 0 1 .4.4v1a.4.4 0 0 1-.4.4.4.4 0 0 1-.4-.4Zm4.075-1.356-.708-.707a.4.4 0 0 1 0-.565.4.4 0 0 1 .567 0l.705.707a.4.4 0 0 1 0 .565.391.391 0 0 1-.282.117.4.4 0 0 1-.28-.12Zm-7.919 0a.4.4 0 0 1 0-.565l.707-.707a.4.4 0 0 1 .565 0 .4.4 0 0 1 0 .565l-.707.707a.39.39 0 0 1-.283.117.393.393 0 0 1-.28-.12Zm.493-4.533a3.463 3.463 0 0 1 3.457-3.46 3.463 3.463 0 0 1 3.457 3.46 3.46 3.46 0 0 1-3.457 3.456A3.46 3.46 0 0 1 2.25 5.709Zm.813 0a2.648 2.648 0 0 0 2.645 2.642 2.646 2.646 0 0 0 2.645-2.642 2.647 2.647 0 0 0-2.645-2.645 2.649 2.649 0 0 0-2.644 2.642Zm7.537.689a.4.4 0 0 1-.4-.4.4.4 0 0 1 .4-.4h1a.4.4 0 0 1 .4.4.4.4 0 0 1-.4.4Zm-10.2 0a.4.4 0 0 1-.4-.4.4.4 0 0 1 .4-.4h1a.4.4 0 0 1 .4.4.4.4 0 0 1-.4.4Zm8.568-3.367a.4.4 0 0 1 0-.568l.708-.705a.4.4 0 0 1 .564 0 .4.4 0 0 1 0 .565l-.705.708a.407.407 0 0 1-.284.114.406.406 0 0 1-.281-.117Zm-6.5 0-.707-.708a.4.4 0 0 1 0-.565.4.4 0 0 1 .565 0l.707.705a.4.4 0 0 1 0 .568.406.406 0 0 1-.282.114.4.4 0 0 1-.285-.117Zm3.137-1.632v-1a.4.4 0 0 1 .4-.4.4.4 0 0 1 .4.4v1a.4.4 0 0 1-.4.4.4.4 0 0 1-.404-.401Z"></path>
                                     </svg>
-                                </div>
+                                </span>
                                 <input id="toggleTheme" type="checkbox" name="theme" class="nav__theme__toggle">
-                                <div id="toggleThemeText" class="nav__theme__text">Light</div>
+                                <span id="toggleThemeText" class="nav__theme__text">Light</span>
                             </label>
+                            
                         </nav>
                     </div>
                 </header>
@@ -53,24 +64,15 @@
                             </div>
                             <div class="h-hero__bottom">
                                 <div id="about" class="h-hero__text">
-                                    <p class="h-hero__text__p">Bonjour ! Je m'appelle [Votre Nom] et je suis étudiant en développement web à [nom de l'école ou de l'université]. Passionné par le code et la création de sites web, j'ai acquis des compétences en HTML, CSS, JavaScript, et frameworks comme React. Mon objectif est de créer des expériences utilisateur innovantes et intuitives.</p>
+                                    <p class="h-hero__text__p">Étudiant à la Haute École Albert Jacquard en Web, mes études me permettent de développer mes compétences en code et design. Cependant, ce qui me passionne le plus c'est la partie design où je peux laisser libre cours à ma créativité tout seul ou à plusieurs.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <div class="container">
-	
-
-                        <div class="second-title">
-                            <h2>My Skills</h2>
-                           
-                        </div>
-
+                            <h2 class="second-title">Compétences</h2>
                         <div class="row">
-
                             <section class="col">
-                                
-
                                 <div class="skills-container">
                                     
                                     <div class="skill">
@@ -81,7 +83,7 @@
                                     </div>
                     
                                     <div class="skill">
-                                        <div class="subject">HTMl</HTMl></div>
+                                        <div class="subject">HTMl</div>
                                         <div class="progress-bar">
                                             <div class="progress-line" style="max-width: 60%"></div>
                                         </div>
@@ -96,10 +98,6 @@
                     
                                 </div>
                             </section>
-                    
-                            <!--   ********  Left Section Ends Here  *******  -->
-                    
-                            <!--   ********  Right Section Starts Here  ********  -->
                     
                             <section class="col">
                                 
@@ -120,26 +118,16 @@
                                     </div>
                     
                                     <div class="skill">
-                                        <div class="subject">Maitrise Figma</div>
+                                        <div class="subject">Figma</div>
                                         <div class="progress-bar">
                                             <div class="progress-line" style="max-width: 71%"></div>
                                         </div>
                                     </div>
                                 </div>
                             </section>
-                    
-                            <!--   ********  Right Section Ends Here  ********   -->
                         </div>
 
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>Image Suiveuse</title>
-                            <link rel="stylesheet" href="styles.css">
-                        </head>
-                        <body>
+                       
                         
                         <section id="work" class="projects">
                             <div class="wrapper">
@@ -159,9 +147,10 @@
                                         <img src="images/IOLCE_PROJETS.png" alt="capture d'écran de l'accueil du projet iolce" class="hover-image">
                                     </div>
                               
-                                    <div class="project">
+                                    <div class="project" id="rux">
                                         <div class="project__text">
-                                            <h2 class="project__title">RUX</h2>
+
+                                            <a href="https://nathan-collart.be/projets/rethinking-ux/" target="_blank" class="project__title">RUX</a>
                                             <p data-splitting class="project__info">Travail de groupe</p>
                                         </div>
                                         <div class="project__year">/02</div>
@@ -172,17 +161,16 @@
                             </div>
                         </section>
                         
-                        <div class="h-hero__bottom">
-                            <div id="about" class="h-hero__text">
-                                <h2 class="second-title">Pourquoi moi ?</h2>
-                                <p>Bonjour ! Je m'appelle [Votre Nom] et je suis étudiant en développement web à [nom de l'école ou de l'université]. Passionné par le code et la création de sites web, j'ai acquis des compétences en HTML, CSS, JavaScript, et frameworks comme React. Mon objectif est de créer des expériences utilisateur innovantes et intuitives.</p>
+                        <div class="h-hero__bottom2">
+                            <h2 class="second-title2">Pourquoi moi ?</h2>
+                                <p class="h-hero__text2">Motivé et impliqué, je suis très curieux de découvrir concrètement à quoi ressemble ce travail en entreprise. Toujours à l'écoute et prêt à sortir de ma zone de confort, cette expérience me permettra de progresser et de mettre un pas dans le monde professionnel.</p>
                             </div>
                         </div>
 
-                        <section class="cta">
+                        <section id="contact" class="cta">
                             <div class="wrapper">
                                 <div class="cta__content">
-                                    <h3>N'hésitez pas à me contacter</h3>
+                                    <h2 class="second-title">N'hésitez pas à me contacter</h2>
                                 </div>
                                 <a href="mailto:nathan.collart@student.heaj.be" class="button">
                                     <span class="button__text">nathan.collart@student.heaj.be</span>
@@ -197,19 +185,12 @@
                         </section>
                     </main>
 
-
-
-                <footer>
-                    <div class="left">CC</div>
-                    <div class="center"><a href="index.html">Retour vers le haut</a></div>
-                    <div class="right">Videos</div>
-                </footer>
-                      
+                    <footer>
+                        <div class="left">© 2024 - Nathan Collart</div>
+                        <div class="center"><a href="index.html" class="retour-lien">Retour vers le haut ⭡</a></div>
+                        <div class="right">Vidéo</div>
+                    </footer>              
             </div>
-        </div>
-
-
-
-        
+        </div>     
     </body>
 </html>
