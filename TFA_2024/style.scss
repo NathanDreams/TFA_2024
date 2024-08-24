@@ -141,12 +141,12 @@ body,html,sub,sup {
 }
 
 .legal h1,.p-hero__year,.p-info h2,.process__title h2,.project .project__year,.services__header h2,.services__item span {
-    font-size: 3.58em;
+    font-size: 1.58em;
     line-height: 1.1;
     letter-spacing: -.02em
 }
 .second-title {
-    font-size: 4.4em;
+    font-size: 3.58em;
     font-family: "Libre Baskerville", serif;
 }
 
@@ -159,7 +159,7 @@ body,html,sub,sup {
 
 .second-title2 {
     margin-bottom: 0.5em; 
-    font-size: 4.4em;
+    font-size: 3.58em;
     font-family: "Libre Baskerville", serif;
 }
 
@@ -187,7 +187,7 @@ body,html,sub,sup {
     letter-spacing: 0
 }
 
-.button span,.c-testimonial__author--name,.h-hero span,.p-info__list li p,.p-info__list li span,.p-next span,.projects__header span,header .nav a,header .nav span,p {
+.button span,.c-testimonial__author--name,.title__main,.p-info__list li p,.p-info__list li span,.p-next span,.projects__header span,header .nav a,header .nav span,p {
     font-size: 1.0626em;
     line-height: 1.5;
     letter-spacing: 0
@@ -227,9 +227,7 @@ body {
     margin: 0
 }
 
-h1 {
-    font-size: 2em
-}
+
 
 code,kbd,pre,samp {
     font-family: monospace,monospace;
@@ -301,9 +299,7 @@ fieldset {
     font: inherit
 }
 
-body,h1,h2,h3,h4,h5,h6,html {
-    font-family: "PP Mori",sans-serif
-}
+
 
 summary {
     display: list-item
@@ -678,11 +674,16 @@ header {
 
 header .nav {
     display: grid;
-    grid-template-columns: 5fr 6fr 1fr;
+    grid-template-columns: 4.5fr 6fr 1fr;
     grid-column-gap: 1.5em
 }
 .retour-lien {
     color: #000000;
+    transition: transform 0.2s ease;
+}
+
+.retour-lien:hover {
+    transform: scale(2.1); 
 }
 .left {
     color: #000000;
@@ -732,7 +733,8 @@ header .nav a,header .nav span {
 
 header .nav__links {
     display: flex;
-    grid-column-gap: 2.5em
+    grid-column-gap: 2.5em;
+    
 }
 
 @media screen and (max-width: 439px) {
@@ -845,7 +847,7 @@ header .nav__next {
 
 .h-hero {
     padding-top: 8em;
-    padding-bottom: 4em
+   
 }
 
 .h-hero__top {
@@ -1000,7 +1002,7 @@ header .nav__next {
     align-items: flex-end;
     color: #111414;
     padding: 3em 0;
-    border-bottom: 1px solid rgba(17,20,20,.1);
+    border-bottom: 2px solid rgba(17,20,20,.1);
     cursor: pointer
 }
 
@@ -1012,7 +1014,7 @@ header .nav__next {
 }
 
 .project:first-child {
-    border-top: 1px solid rgba(17,20,20,.1)
+    border-top: 2px solid rgba(17,20,20,.1)
 }
 
 .dark-mode .process ul li,.dark-mode .project {
@@ -1032,12 +1034,14 @@ header .nav__next {
 }
 .project__text {
     text-decoration: none;
+    font-size: 0.55em;
 }
 .project .project__info {
     pointer-events: none
 }
 .project__info {
-    padding-top: 10px;
+    padding-top: 20px;
+    font-size: 2em;
 }
 @media screen and (max-width: 767px) {
     
@@ -1776,4 +1780,546 @@ footer {
 
 
   
+.marquee {
+    height: 5vw;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    padding-top: 7em;
+    padding-bottom: 6em;
+}
+
+.marquee .marquee--inner {
+    display: block;
+    width: 400vw;
+    margin: 1vw 0;
+    position: absolute;
+    animation: marquee 17s linear infinite
+}
+
+.marquee .marquee--inner p {
+    font-size: 4.2vw;
+    line-height: 1;
+    margin: 0; 
+    white-space: nowrap; 
+}
+
+.marquee .marquee--inner a {
+    color: inherit;
+    text-decoration: none
+    
+}
+
+.marquee .marquee--inner:hover {
+    animation-play-state: paused
+}
+
+marquee span {
+    float: left;
+    width: 50%;
+    margin: 0; /* Ajoutez cette ligne pour éliminer toute marge */
+    padding: 0; /* Ajoutez cette ligne pour éliminer tout padding */
+}
+
+@keyframes marquee {
+    0% {
+        left: 0
+    }
+
+    100% {
+        left: -100%
+    }
+}
+
+.left-nav {
+    pointer-events: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 50%;
+    height: 110px;
+    width: 40px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.5s ease
+}
+
+.left-nav h4 {
+    writing-mode: vertical-rl;
+    color: #000;
+    letter-spacing: 1.2px;
+    text-align: center;
+    height: 110px;
+    float: right;
+    padding: 20px;
+    transform: translateX(50%)
+}
+
+.left-nav a {
+    text-decoration: none
+}
+
+.left-nav .arrowleft {
+    top: calc(50% - 7.5px);
+    right: calc(50% - 7.5px);
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000
+}
+
+.left-nav .arrow-left {
+    transform: rotate(-135deg)
+}
+
+.left-nav:hover {
+    width: 50px;
+    opacity: 0.8
+}
+
+next #next .italic {
+    padding-left: 10vw;
+    transition: 0.5s ease;
+    -webkit-text-stroke: 1px black;
+    
+    -webkit-text-fill-color: white;
+    
+    color: black
+}
+
+.projet-page .italic {
+    font-size: 1.4vw;
+    padding-top: 10px
+}
+
+.projet-page .italic a {
+    color: black;
+    text-decoration: none;
+    border-bottom: black 1px solid
+}
+
+.webdesign {
+    text-align: right;
+}
+
+.next-project-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.next-project-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #1F2937;
+    background-color: #fff;
+    color: #1F2937;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.next-project-button:hover {
+    background-color: #e2e2e2;
+}
+
+.next-project-button span {
+    margin-right: 10px;
+}
+
+.arrow-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F2937;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.arrow-circle svg path {
+    stroke: #ffffff;
+}
+
+.arrow-circle svg circle {
+    stroke: #ffffff;
+}
+
+
+.web-design-section {
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.web-design-section h2 {
+    
+    margin: 0;
+    position: relative;
+}
+
+.divider {
+    width: 2px;
+    height: 50px;
+    background-color: #50c2b4;
+    margin: 20px auto;
+}
+
+.content-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+.content-box h3 {
+    font-size: 20px;
+    
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+   
+}
+
+.content-box h3::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    
+    margin: 10px auto;
+}
+
+.content-box p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    font-size: 1.7em;
+}
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5em;
+    
+    
+    
+}
+
+.custom-text {
+    text-decoration: none;
+    color: inherit; /* Utilise la même couleur que le texte environnant */
+    font-size: 3.58em;
+    margin-bottom: 20px; /* Espace entre le texte et le bouton */
+    font-family: "Libre Baskerville", serif;
+    
+}
+
+/* Appliquer l'effet hover sur le bouton lorsque le texte est survolé */
+.custom-text:hover + .custom-button-container .custom-button,
+.custom-button-container:hover .custom-button {
+    background-color: #1a1a3c;
+    color: #f5f5e9;
+    transform: scale(1.05); /* Agrandit légèrement le bouton */
+}
+
+.custom-button-container {
+    display: inline-block;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: inherit; /* Utilise la même couleur que le texte environnant */
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-button:focus, .custom-button:active, .custom-button:visited {
+    outline: none;
+    color: inherit; /* Garde la même couleur même après clic */
+    background-color: transparent;
+}
+
+.custom-text:focus, .custom-text:active, .custom-text:visited {
+    outline: none;
+    color: inherit; /* Garde la même couleur même après clic */
+    background-color: transparent;
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+.image-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+   
+    overflow: hidden; 
+}
+img { 
+    border: 2px solid #333;
+}
+.custom-image {
+    max-width: 90%; 
+    max-height: 90%; 
+    object-fit: cover; 
+}
+
+.web-design-section {
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+
+
+.custom-container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.custom-container {
+    
+    position: relative;
+}
+
+
+.h-hero__title_projets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+
+.title__main_projets {
+    font-family: "Libre Baskerville", serif;
+    font-size: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+}
+
+.projects__list {
+    font-family: "Libre Baskerville", serif;
+}
+
+
+/* General Styles */
+
+
+.custom-module-title {
+    font-size: 3.58em;
+    font-family: "Libre Baskerville", serif;
+}
+
+.custom-container {
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.custom-col {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Content Box Styles */
+.custom-content-box {
+    text-align: center;
+    padding-top: 1em;
+    border-radius: 8px;
+    
+}
+
+.custom-content-box-icon {
+    font-size: 3.58rem;
+    color: #333;
+}
+
+.custom-content-box-title {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.custom-content-box-text {
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Increased Spacing for Custom Item */
+.custom-columns .custom-item {
+    margin-bottom: 30px; /* Increased bottom margin for vertical spacing */
+}
+
+@media (max-width: 990px) {
+    .custom-columns .custom-item {
+        width: 100%;
+    }
+}
+.polices {
+    font-size: 3.58em;
+    font-family: "Libre Baskerville", serif;
+}
+
+    .custom-columns {
+        justify-content: space-between;
+    }
+
+    .custom-columns .custom-item {
+        width: 30%; 
+        margin-bottom: 30px; 
+        margin-right: 2%; 
+
+    
+    .custom-columns .custom-item:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+.h-hero__bottom__projet {
+    display: flex;            
+    justify-content: flex-end; 
+ }
   
+ .custom-image {
+    transition: transform 0.3s ease; 
+}
+
+.custom-image:hover {
+    transform: scale(1.015);
+    border: none; 
+}
+
+.h-hero__bottom {
+    display: flex;                
+    justify-content: space-between; 
+    align-items: flex-start;      
+    margin-bottom: 20px;          
+}
+
+.custom-title {
+    text-align: left;             
+    flex: 1;  
+    
+    font-family: "Libre Baskerville", serif;
+    padding-bottom: 10px;  
+
+}
+@media (min-width: 770px) {
+    .custom-title {
+        font-size: 2.58em; 
+    
+    }
+}
+.h-hero__text {
+             
+    flex: 1;                     
+}
+.custom-content-box {
+    border: none; 
+}
+
+
+@media (min-width: 701px) {
+    
+    .h-hero__bottom_mobile {
+        display: none;
+    }
+    
+}
+
+.h-hero__text_mobile {
+    text-align: center;
+}
+
+.h-hero__bottom {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: flex-start;   
+}
+
+.custom-titleindex {
+    padding-bottom: 20px;
+    flex: 1;
+    padding-left: 1em;
+    font-weight: 400;
+    font-size: 2.58em;
+                       
+}
+
+.h-hero__text {
+    flex: 2;                   
+    padding-left: 20px;       
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.custom-col {
+    flex: 1; 
+    min-width: 200px; 
+}
+
+@media (max-width: 700px) {
+    .custom-col {
+        flex-basis: 100%; 
+    }
+}
+.h-hero__bottom {
+    display: flex;            
+    justify-content: space-between; 
+    align-items: flex-start;  
+    
+}
+
+.cta__content_whyme {
+    flex: 1;                  
+    margin-right: 20px;      
+}
+
+.h-hero__text {
+    flex: 2;                 
+}
+
+.second-title_whyme {
+    font-size: 3.58em;
+    font-family: "Libre Baskerville", serif;
+    margin-left: 1.em;
+}
+

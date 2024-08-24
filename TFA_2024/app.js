@@ -35,53 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const iolceProject = document.getElementById('iolce');
-    const hoverImage = iolceProject.querySelector('.hover-image');
-    const link = iolceProject.querySelector('a');
-  
-    iolceProject.addEventListener('mousemove', function (e) {
-      hoverImage.style.display = 'block';
-  
-      // Calculer la position de l'image en fonction de la position horizontale de la souris
-      hoverImage.style.left = (e.clientX - hoverImage.offsetWidth * 0.8) + 'px';
-  
-      // Fixer la position verticale de l'image
-      hoverImage.style.top = '-40%';
-    });
-  
-    iolceProject.addEventListener('mouseleave', function () {
-      hoverImage.style.display = 'none';
-    });
-  
-    iolceProject.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.location.href = link.href;
-    });
-  });
-  
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    const ruxProject = document.querySelector('.projects__list .project:nth-child(2)'); // Sélectionnez le deuxième projet
-    const hoverImageRUX = ruxProject.querySelector('.hover-image');
-    const linkRUX = ruxProject.querySelector('a');
-  
-    ruxProject.addEventListener('mousemove', function (e) {
-      hoverImageRUX.style.display = 'block';
-      hoverImageRUX.style.left = (e.clientX - hoverImageRUX.offsetWidth * 0.8) + 'px';
-      hoverImageRUX.style.top = '10%';
-    });
-  
-    ruxProject.addEventListener('mouseleave', function () {
-      hoverImageRUX.style.display = 'none';
-    });
-  
-    ruxProject.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.location.href = linkRUX.href;
-    });
+  const projects = document.querySelectorAll('.projects__list .project');
+
+  projects.forEach(project => {
+      const hoverImage = project.querySelector('.hover-image');
+      const link = project.querySelector('a');
+
+      project.addEventListener('mousemove', function (e) {
+          hoverImage.style.display = 'block';
+          hoverImage.style.left = (e.clientX - hoverImage.offsetWidth * 0.8) + 'px';
+          hoverImage.style.top = '-40%'; // You can adjust this value as needed
+      });
+
+      project.addEventListener('mouseleave', function () {
+          hoverImage.style.display = 'none';
+      });
+
+      project.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.location.href = link.href;
+      });
   });
 
+  // Additional logic to handle hover image visibility when moving between projects
+  projects.forEach((currentProject, index) => {
+      currentProject.addEventListener('mousemove', function (e) {
+          // Check if the mouse is in the next project area
+          if (index < projects.length - 1) {
+              const nextProject = projects[index + 1];
+              const nextProjectRect = nextProject.getBoundingClientRect();
 
+              if (e.clientY > nextProjectRect.top) {
+                  const hoverImageNext = nextProject.querySelector('.hover-image');
+                  hoverImageNext.style.display = 'none';
+              }
+          }
+      });
+  });
+});
 
 
 
